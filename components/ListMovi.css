@@ -1,0 +1,85 @@
+p{
+    color: white;
+  }
+  .imag{
+    position: absolute; 
+    right: -8.7%;
+    position: relative;
+  
+  }
+  .intro{
+      position: absolute;
+      color: white;
+      z-index: 50;
+      text-align: center;
+  
+  }
+  .filmdesc{
+    display: flex;
+    justify-content: space-between; 
+    
+  }
+  .imgslien{
+    background-color: #262328;
+    /* margin:0px 20px; */
+    padding: 10px 38px;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    width: 65%;
+    height: 700PX;
+    position: relative;
+  }
+  .log{
+    width: 163px;
+    height: 202px; 
+  }
+  .descrition{
+    position: fixed;
+    top: 140px;
+    right: 40px;
+  }
+  .strming{
+    width: 40px;
+    height: 40px;
+  }
+  .ajou{
+    background-color: transparent;
+    border:none;
+    font-size: 0px;
+    border-radius: 5PX;
+    margin-top: -10px;
+  }
+  /* #pls{
+    width: 163px;
+    height: 202px;
+  } */
+  
+  .descrp{
+    display: flex;
+    justify-content: space-between; 
+  }
+  .ground{
+    color: white;
+    background-color:#262328;
+    border:none;
+    /* border-color: #262328; */
+    margin: 19px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 200px;
+    
+  } 
+  .star{
+    position: absolute;
+    left:25px
+  }
+  .spinner-border{
+    margin-right: 100px;
+  }
+  .sr-only{
+    margin-right: 100px;
+  }
+  

@@ -1,0 +1,39 @@
+.navMovi{
+    background-color: #26231e;
+    color: #ababab;
+    list-style-type:none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0px 20px; */
+    height: 140px;
+  padding-right: 40px;
+    position: sticky;top:0;
+    z-index: 5;
+} 
+.btn-secondary {
+    position: absolute;
+    left: 76%;
+    bottom: 2%;
+    color: #fff;
+    border-color: #0cdc86;
+    background-color: #0cdc86;
+    position: fixed;
+    width: 100px;
+    height: 30px;
+}
+.logo{
+    margin-left: 20px;
+}
+ #search{
+    position: absolute;
+    right:23%;
+    width: 300px;
+    height: 50px;
+    background: #26231e;
+    border: none;
+    font-size: 10pt;
+    color: #63717f;
+    padding-left: 45px;
+    border-bottom: solid 1px #ababab;
+  }
