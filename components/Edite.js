@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import { connect } from "react-redux";
-import {addMovie } from "./actions";
+import { updatetask } from "./actions";
 const customStyles = {
   content: {
     top: "50%",
@@ -18,7 +18,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       modalIsOpen: false,
-      name: ""
+      title: ""
     };
   }
 
@@ -29,15 +29,13 @@ class App extends React.Component {
   closeModal = () => {
     this.setState({ modalIsOpen: false });
   };
-  handlechange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
 
   render() {
+    console.log(this.props);
     return (
       <div>
-        <button className="modif" onClick={this.openModal}>
-          Ajouter
+        <button className="btnlist" onClick={this.openModal}>
+          Edit
         </button>
         <Modal
           isOpen={this.state.modalIsOpen}
@@ -46,23 +44,26 @@ class App extends React.Component {
           style={customStyles}
           contentLabel="Example Modal"
         >
-           <input class="ground"id="imgfilm"type="text" placeholder="imgfilm..."name="url"onChange={this.handlechange}/>
-
-           <input class="ground"id="name"type="text"placeholder="name..."name="name"onChange={this.handlechange}/>
-
-           
-           <button class="ajou">"removefilm"</button>
-           
-           <input class="ground" id="rate" type="number" max="5" placeholder="rates..." name="rate" onChange={this.handlechange} /> 
-
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            name=""
+            onChange={e => this.setState({ title: e.target.value })}
+          />
           <button className="btn btn-outline-dark" onClick={this.closeModal}>
             close
           </button>
           <button
-            className="btn"
-            onClick={() => this.props.addMovie(this.state)}
+            className="btn btn-outline-dark"
+            onClick={() =>
+              this.props.updatetask({
+                id: this.props.index,
+                task: this.state.title
+              })
+            }
           >
-            Add newmovie
+            Update
           </button>
         </Modal>
       </div>
@@ -70,6 +71,6 @@ class App extends React.Component {
   }
 }
 const mapDispatchToProps = dispatch => ({
-  addMovie: payload => dispatch(addMovie(payload))
+  updatetask: payload => dispatch(updatetask(payload))
 });
 export default connect(null, mapDispatchToProps)(App);
