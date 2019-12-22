@@ -36,7 +36,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <button className="modif" onClick={this.openModal}>
+        <button className="btnlist" onClick={this.openModal}>
           Ajouter
         </button>
         <Modal
@@ -59,7 +59,7 @@ class App extends React.Component {
             close
           </button>
           <button
-            className="btn"
+            className="btn btn-outline-dark"
             onClick={() => this.props.addMovie(this.state)}
           >
             Add newmovie

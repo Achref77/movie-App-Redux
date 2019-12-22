@@ -47,7 +47,10 @@ class App extends React.Component {
               numberOfStars={5}
               name="rating"
             />
+    
+           
           </div>
+          <iframe width="560" height="315" src={this.state.movie.boton} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     );
