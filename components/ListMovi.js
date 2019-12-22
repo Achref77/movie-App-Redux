@@ -46,10 +46,12 @@ function ListMovi(props) {
                 name="rating"
               />
             </div>
+            <div className="bottom-movie">
             <Edite index={i} />
             <button className="btnlist" onClick={() => props.deletes(i)}>
               remove
             </button>
+            </div>
           </div>
         ))}
 

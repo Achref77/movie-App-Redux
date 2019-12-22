@@ -66,25 +66,13 @@ export const reducer = (state = film, action) => {
         filterbyRate: action.newRating,
         rate: action.newRating
       };
-
-    case "CHANGE_RATING":
-      // console.log(state, action);
-      // state.map(e => {
-      //   if (e.index === action.name) {
-      //     e.rate = action.newRating;
-      //   }
-      // });
-
-      return {
-        ...state
-      };
-
     /////////////////////ADD////////////////////
 
     case "ADD":
       return {
         ...state,
         listMovi: [...state.listMovi, action.payload]
+        
       };
 
     /////////////////////Modifecation////////////////////
